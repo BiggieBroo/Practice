@@ -1,11 +1,11 @@
-library identifier: 'Practice@jenkins-shared-library', retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://github.com/BiggieBroo/Practice', credentialsId: 'github'])
+library identifier: "Practice@jenkins-shared-library" retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://github.com/BiggieBroo/Practice', credentialsId: 'github'])
 
 pipeline {
 
 	agent any
 
 	environment {
-		IMAGE_TITLE = "biggiebroo/practice:my-app-4.0"
+		IMAGE_TITLE = "biggiebroo/practice:my-app-10.0"
 	}
 
 	stages {
@@ -23,11 +23,11 @@ pipeline {
 		stage("Deployment") {
 			steps {
 				script {
-					sh "echo 'Finished'"
+					sh "echo 'Deployment'"
 				}
 			}
 		} // end Deployment
 
-	}
+	} // end stages
 
 } // end pipeline
