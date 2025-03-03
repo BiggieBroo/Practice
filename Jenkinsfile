@@ -2,6 +2,8 @@ library: 'Practice@jenkins-shared-library', retriever: modernSCM([$class: 'GitSC
 
 pipeline {
 
+	agent any
+
 	// Environment
 	environment {
 		IMAGE_TITLE = "biggiebroo/practice:my-app-1.0"
